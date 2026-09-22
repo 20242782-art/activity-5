@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vergara Creatives</title>
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#f4f4f4;
+    color:#333;min-height:100vh;display:flex;flex-direction:column}
+
+header{background:#222;
+    color:white;padding:25px;text-align:center}
+.logo{width:50px;height:50px;border-radius:50%;border:2px solid #d4af37}
+header h1{margin:5px}
+header p{color:#d4af37}
+
+nav{background:#333;padding:12px;text-align:center}
+nav a{color:white;margin:15px;text-decoration:none;font-weight:bold}
+nav a:hover{color:#d4af37}
+
+main{flex:1;padding:40px 20px}
+.page{display:none}
+.active{display:block}
+
+.card,#about{background:white;max-width:900px;
+    margin:auto;padding:40px;text-align:center;border-radius:10px}
+
+.photos img,.about-img{width:80px;height:80px;border-radius:50%;
+    border:3px solid #d4af37;margin:10px;object-fit:cover}
+.photos img{cursor:pointer}
+.photos img:hover{transform:scale(1.1)}
+
+.description{line-height:1.6}
+#about .description{text-align:left}
+
+.btn{display:inline-block;background:#222;color:white;
+    padding:10px 20px;border-radius:20px;text-decoration:none}
+.btn:hover{background:#d4af37;color:#222}
+
+.about-img{width:100px;height:100px}
+
+footer{background:black;
+color:white;text-align:center;padding:15px;margin-top:40px}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo.jpg" class="logo">
+<h1>VERGARA CREATIVES</h1>
+<p>DESIGN · CODE · CREATIVITY</p>
+</header>
+
+<nav>
+<a href="#" onclick="show('home')">HOME</a>
+<a href="#" onclick="show('about')">ABOUT</a>
+<a href="#">GALLERY</a>
+<a href="#">CONTACT</a>
+</nav>
+
+<main>
+
+<section id="home" class="page active">
+<div class="card">
+
+<h2>EXPERIENCE THE CREATIVE</h2>
+<p><i>Crafting beauty through intentional design.</i></p>
+
+<div class="photos">
+<a href="#" onclick="show('about')"><img src="a.jpg"></a>
+<a href="#" onclick="show('about')"><img src="a.jpg"></a>
+<a href="#" onclick="show('about')"><img src="a.jpg"></a>
+</div>
+
+<p class="description">
+Step into a world where every detail is a masterpiece.
+Vergara's Creative Collections offers a unique blend of
+modern innovation and timeless elegance.
+</p>
+
+<a href="#" class="btn" onclick="show('about')">LEARN MORE</a>
+
+</div>
+</section>
+
+<section id="about" class="page">
+
+<img src="a.jpg" class="about-img">
+
+<h2>ABOUT ME</h2>
+
+<p class="description">
+Hi, I'm Michael Vergara — the creator behind Vergara Creatives.
+I'm a Computer Science student with a passion for building things,
+whether that's through code or design. This site is a space where
+I bring together my technical skills and creative interests.
+</p>
+
+<p class="description">
+When I'm not studying or coding, you'll usually find me playing
+video games — it's where I unwind, but it's also a big source of
+inspiration for my projects.
+</p>
+
+<p class="description">
+Vergara Creatives is where I practice my skills, try new ideas,
+and combine my technical and creative interests.
+</p>
+
+</section>
+
+</main>
+
+<footer>&copy; 2026 Vergara Creatives</footer>
+
+<script>
+function show(page){
+document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));
+document.getElementById(page).classList.add("active");
+}
+</script>
+
+</body>
+</html>
